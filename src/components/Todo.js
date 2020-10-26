@@ -2,7 +2,6 @@ import  React,{Component} from  'react'
 import TodoItem from "./TodoItem";
 import PropTypes from 'prop-types'
 
-
 class  TodoApp extends Component{
     render(){
         return this.props.todos.map((todo) => (
@@ -14,7 +13,6 @@ class  TodoApp extends Component{
 }
 
 export  default  TodoApp;
-
 //PropTypes
 TodoApp.propTypes = {
     todo:PropTypes.array.isRequired
