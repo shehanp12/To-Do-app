@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import TodoApp from "./components/Todo";
+import Todos from "./components/Todos";
 
 class App extends Component{
 
@@ -24,10 +24,15 @@ class App extends Component{
         ]
     }
 
+markComplete = () =>{
+         console.log('From app.js')
+}
+
+
     render(){
     return(
         <div>
-        <TodoApp todos={this.state.todos} />
+        <Todos todos={this.state.todos} markComplete={this.markComplete}/>
         </div>
     )
   }

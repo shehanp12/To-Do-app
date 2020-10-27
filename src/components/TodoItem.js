@@ -3,6 +3,11 @@ import PropTypes from 'prop-types'
 
 class TodoItem extends Component{
 
+    markComplete =(e) =>{
+        console.log(this.props)
+    }
+
+
     getStyle = () =>{
 
        return {
@@ -13,11 +18,12 @@ class TodoItem extends Component{
        }
     }
 
+
     render(){
         return(
             <div style={this.getStyle()}>
           <p>
-              <input type="checkbox" name="" id=""/>
+              <input type="checkbox" onChange={this.props.markComplete}/> {' '}
               {this.props.todo.title}
           </p>
             </div>
@@ -25,6 +31,9 @@ class TodoItem extends Component{
         )
     }
 }
+
+
+
 
 //PropTypes
 TodoItem.propTypes= {
