@@ -32,7 +32,10 @@ markComplete = (id) =>{
     render(){
     return(
         <div>
-        <Todos todos={this.state.todos} markComplete={this.markComplete}/>
+        <Todos
+            todos={this.state.todos}
+            markComplete={this.markComplete}
+        />
         </div>
     )
   }
