@@ -1,9 +1,16 @@
 import  React,{Component} from 'react'
-
+import PropTypes from 'prop-types';
 class AddTodo extends Component{
 
     state ={
         title:''
+    }
+
+    onSubmit = (e) =>{
+        e.preventDefault();
+        this.props.addTodo(this.state.title );
+        this.setState({title:''})
+
     }
 
 onChange =(e) => this.setState({title:e.target.value})
@@ -30,6 +37,11 @@ onChange =(e) => this.setState({title:e.target.value})
         )
 
     }
+}
+
+//PropTypes
+AddTodo.prototypes = {
+    addTodo:PropTypes.func.isRequired
 }
 
 export default  AddTodo;
