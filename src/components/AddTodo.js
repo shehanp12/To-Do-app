@@ -13,10 +13,10 @@ class AddTodo extends Component{
 
     }
 
-onChange =(e) => this.setState({title:e.target.value})
+onChange =(e) => this.setState({[e.target.name]:e.target.value})
     render(){
         return(
-          <form style={{display:'flex'}}>
+          <form style={{display:'flex'}} onSubmit={this.onSubmit}>
               <input
                   type="text"
                   name="title"
@@ -31,6 +31,7 @@ onChange =(e) => this.setState({title:e.target.value})
                   value="submit"
                   className="btn"
                   style={{flex:'1'}}
+
               />
 
           </form>
